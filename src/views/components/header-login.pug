@@ -1,0 +1,32 @@
+header.header
+    .container
+        .header__justify
+            .header__logo
+                a(href='#')
+                    img(src='/src/assets/img/logo.svg' alt='Логотип').desktop
+                    img(src='/src/assets/img/logo-mob.svg' alt='Логотип').mob
+
+            nav.header__nav
+                ul.nav
+                    li.nav__el
+                        a(href='').nav__link  Междугороднее такси
+                    li.nav__el
+                        a(href='').nav__link Авиабилеты
+                    li.nav__el
+                        a(href='').nav__link ЖД билеты
+                    li.nav__el
+                        a(href='').nav__link Автобусные перевозки
+                    li.nav__el
+                        a(href='').nav__link Партнерам
+
+            .header__links
+                a(href='').header__user
+                    span Личный кабинет
+
+                    svg(width=38  height=38)
+                        use(xlink:href='/src/assets/img/sprite.svg#icon--user')
+
+                a(href='').button.button-blue
+                    span Войти
+                    svg(width=12  height=13)
+                        use(xlink:href='/src/assets/img/sprite.svg#icon-phone')

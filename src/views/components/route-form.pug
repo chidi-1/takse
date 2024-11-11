@@ -1,0 +1,27 @@
+.route-form
+    .route-form__labels
+        label.label-select
+            select(name='').js--select-style.js--from
+                // в селекты обязательно вставлять первый пустой элемент для правильной анимации подсказки
+                option(selected disabled)
+                option(value='Барнаул') Барнаул
+                option(value='Новосибирск') Новосибирск
+                option(value='Томск') Томск
+                option(value='Красноярск') Красноярск
+
+            button.no-style
+                svg(width=24  height=24)
+                    use(xlink:href='/src/assets/img/sprite.svg#icon-swap')
+
+        label.label-select
+            select(name='').js--select-style.js--to
+                option(selected disabled)
+                option(value='Барнаул') Барнаул
+                option(value='Новосибирск') Новосибирск
+                option(value='Томск') Томск
+                option(value='Красноярск') Красноярск
+        label.label-date
+            input(type='text' name='').calendar-inline.range
+            span.label-text Когда
+
+    button(type='button').button.button-blue.js--open-modal Найти транспорт

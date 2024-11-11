@@ -1,0 +1,18 @@
+// Adaptive Width
+$desktopWidth            : 1440
+$notebookWidth           : 1279
+$tableWidth              : 1023
+$phoneWidth              : 779
+$smPhoneWidth            : 320
+
+@mixin netbook
+  @media only screen and (max-width: $notebookWidth * 1px)
+    @content
+
+@mixin tablet
+  @media only screen and (max-width: $tableWidth * 1px)
+    @content
+
+@mixin mobile
+  @media only screen and (max-width: $phoneWidth * 1px)
+    @content

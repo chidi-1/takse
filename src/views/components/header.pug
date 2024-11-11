@@ -1,0 +1,26 @@
+header.header
+    .container
+        .header__justify
+            a(href='#').header__logo
+                img(src='/src/assets/img/logo.svg' alt='Логотип').desktop
+                img(src='/src/assets/img/logomob.svg' alt='Логотип').mob
+
+            nav.header__nav
+                ul.nav
+                    li.nav__el
+                        a(href='').nav__link  Междугороднее такси
+                    li.nav__el
+                        a(href='').nav__link Авиабилеты
+                    li.nav__el
+                        a(href='').nav__link ЖД билеты
+                    li.nav__el
+                        a(href='').nav__link Автобусные перевозки
+                    li.nav__el
+                        a(href='').nav__link Партнерам
+
+            .header__links
+                a(href='tel:+78003507767').header__phone 8 (800) 350-77-67
+                a(href='').button.button-blue
+                    span Войти
+                    svg(width=12  height=18)
+                        use(xlink:href='/src/assets/img/sprite.svg#icon-enter')

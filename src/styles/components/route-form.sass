@@ -1,0 +1,159 @@
+.route-form
+  display: flex
+  align-items: stretch
+  gap: 8px
+
+  @include mobile
+    flex-direction: column
+    gap: 1.6rem
+
+  .button
+    @include mobile
+      min-height: 4.5rem
+
+  &__labels
+    display: flex
+    align-items: stretch
+    padding: 8px 0
+    background: $whiteColor
+    border-radius: 1.2rem
+
+    @include tablet
+      padding: 6px 0
+    @include mobile
+      padding: 4px 0
+      display: grid
+      grid-template-columns: repeat(2, 50%)
+
+    label.label-date
+      position: relative
+
+      @include mobile
+        grid-column-start: 1
+        grid-column-end: 3
+        border-top: 1px solid $grayBgColor
+
+      input
+        padding: 0 1.3rem
+        min-height: 4.4rem
+        display: flex
+        align-items: center
+
+        @include tablet
+          min-height: 3.4rem
+        @include mobile
+          width: 100%
+          padding: 0 1.6rem
+          border-radius: 8px
+
+        &.changed + .label-text
+          font-size: 1rem
+          top: 0
+          transform: translateY(-25%)
+
+      .label-text
+        position: absolute
+        left: 1.3rem
+        top: 50%
+        transform: translateY(-50%)
+        font-family: $fontSegoe
+        color: #BDBDBD
+
+    label.label-select
+      border-right: 1px solid #D4D4D4
+      position: relative
+      width: 18rem
+      padding: 0 1.3rem
+
+      @include mobile
+        padding: 0 1.6rem
+      @include mobile
+        width: auto
+
+      .no-style
+        position: absolute
+        right: -1.2rem
+        top: 50%
+        transform: translateY(-50%)
+
+        svg
+          @include transition
+          color: $grayTextColor
+
+          &:hover
+            color: $blackColor
+
+      .choices
+        margin-bottom: 0
+        overflow: visible
+
+        &:after
+          display: none
+
+        .choices__inner
+          padding: 0
+          display: flex
+          align-items: stretch
+          align-content: stretch
+          background: transparent
+          border: none
+          overflow: visible
+
+          @include tablet
+            min-height: 3.4rem
+
+          .js--from + .choices__list:after
+            content: 'Откуда'
+
+          .js--to + .choices__list:after
+            content: 'Куда'
+
+          .changed + .choices__list:after
+            font-size: 1rem
+            top: 0
+            transform: translateY(-25%)
+
+          .choices__list
+            display: flex
+            align-items: center
+            padding: 0
+            position: relative
+            min-height: 4.4rem
+
+            @include tablet
+              min-height: 3.4rem
+
+            .choices__item
+              font-family: $fontSegoe
+              color: $blackColor
+              font-size: 1.6rem
+
+            &:after
+              @include transition
+              position: absolute
+              left: 0
+              top: 50%
+              transform: translateY(-50%)
+              font-family: $fontSegoe
+              color: #BDBDBD
+
+        .choices__list--dropdown
+          border: none
+          width: calc(100% + 2.6rem)
+          left: -1.3rem
+
+          .choices__list
+            padding: 8px
+            border-radius: 0 0 1.2rem 1.2rem
+            max-height: 20rem
+            overflow: auto
+
+            .choices__item
+              font-family: $fontSegoe
+              color: $blackColor
+              font-size: 1.6rem
+              padding: 5px
+              border-bottom: 1px solid #E7E7E7
+
+              &:hover
+                background: transparent

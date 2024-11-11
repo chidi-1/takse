@@ -1,0 +1,342 @@
+.route-modal
+    script(src="https://api-maps.yandex.ru/2.1/?apikey=a05aacec-6f3a-46fa-a45b-ad4882c9f689&lang=ru_RU" type="text/javascript")
+    .container
+        include route-tabs
+
+        div(id='map').route-map.js--route-map
+
+        include route-form
+
+        .route-modal__params
+            .route-modal__length
+                span Расстояние:
+                span.value 0
+            .route-modal__time
+                span Время в дороге:
+                span.value 0
+
+        div
+            include fleet-slider
+
+        .en-route
+            h3.h3 Города и&nbsp;достопримечательности в&nbsp;дороге
+
+            .en-route__towns
+                .towns-slider
+                    .swiper-wrapper
+                        .swiper-slide
+                            div(data-town='1').towns-slider__el.js--change-town
+                                .towns-slider__bg
+                                    img(src='/src/assets/img/bg--town-1.jpg' alt='Название города')
+                                span.towns-slider__name Омск
+                        .swiper-slide
+                            div(data-town='2').towns-slider__el.js--change-town
+                                .towns-slider__bg
+                                    img(src='/src/assets/img/bg--town-2.jpg' alt='Название города')
+                                span.towns-slider__name Томск
+                        .swiper-slide
+                            div(data-town='3').towns-slider__el.js--change-town
+                                .towns-slider__bg
+                                    img(src='/src/assets/img/bg--town-3.jpg' alt='Название города')
+                                span.towns-slider__name Барнаул
+                        .swiper-slide
+                            div(data-town='4').towns-slider__el.js--change-town
+                                .towns-slider__bg
+                                    img(src='/src/assets/img/bg--town-4.jpg' alt='Название города')
+                                span.towns-slider__name Новосибирск
+
+                    .swiper-button-next
+                        svg(width=13 height=12)
+                            use(xlink:href='/src/assets/img/sprite.svg#arrow-right')
+                    .swiper-button-prev
+                        svg(width=13 height=12)
+                            use(xlink:href='/src/assets/img/sprite.svg#arrow-left')
+
+
+            div(data-town='1').tabs.sight.active
+                h3.h3 Омск
+
+                .sight__top
+                    ul.tabs__caption
+                        li.active Вокзал Новосибирск-Главный
+                        li Академгородок
+
+                    .sight__photos.containers
+                        .tabs__content.active
+                            .sight__slider
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        img(src='/src/assets/img/img--sight.jpg' alt='Фото')
+                                    .swiper-slide
+                                        img(src='/src/assets/img/img--sight.jpg' alt='Фото')
+
+                                .swiper-button-next
+                                    svg(width=13 height=12)
+                                        use(xlink:href='/src/assets/img/sprite.svg#arrow-right')
+                                .swiper-button-prev
+                                    svg(width=13 height=12)
+                                        use(xlink:href='/src/assets/img/sprite.svg#arrow-left')
+                                .swiper-pagination
+
+                        .tabs__content
+                            .sight__slider
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        img(src='/src/assets/img/img--sight.jpg' alt='Фото')
+                                    .swiper-slide
+                                        img(src='/src/assets/img/img--sight.jpg' alt='Фото')
+                                    .swiper-slide
+                                        img(src='/src/assets/img/img--sight.jpg' alt='Фото')
+
+                                .swiper-button-next
+                                    svg(width=13 height=12)
+                                        use(xlink:href='/src/assets/img/sprite.svg#arrow-right')
+                                .swiper-button-prev
+                                    svg(width=13 height=12)
+                                        use(xlink:href='/src/assets/img/sprite.svg#arrow-left')
+                                .swiper-pagination
+
+                        .tabs__content
+                            .sight__slider
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        img(src='/src/assets/img/img--sight.jpg' alt='Фото')
+                                    .swiper-slide
+                                        img(src='/src/assets/img/img--sight.jpg' alt='Фото')
+                                    .swiper-slide
+                                        img(src='/src/assets/img/img--sight.jpg' alt='Фото')
+                                    .swiper-slide
+                                        img(src='/src/assets/img/img--sight.jpg' alt='Фото')
+
+                                .swiper-button-next
+                                    svg(width=13 height=12)
+                                        use(xlink:href='/src/assets/img/sprite.svg#arrow-right')
+                                .swiper-button-prev
+                                    svg(width=13 height=12)
+                                        use(xlink:href='/src/assets/img/sprite.svg#arrow-left')
+                                .swiper-pagination
+
+                .sight__description.containers
+                    .tabs__content.active
+                        p  Вокзал Новосибирск-Главный&nbsp;&mdash; один из&nbsp;крупнейших в&nbsp;стране. Он&nbsp;притягивает внимание не&nbsp;только тех, кто отправляется в&nbsp;путешествие на&nbsp;поезде или прибывает в&nbsp;город, но&nbsp;и&nbsp;любителей необычных строений. Его центральная часть в&nbsp;форме триумфальной арки обрамлена пилястрами и&nbsp;увенчана аттиком. А&nbsp;на&nbsp;перронах установлены скульптуры людей, встречающих и&nbsp;провожающих поезда.
+                    .tabs__content
+                        p  Описание
+                    .tabs__content
+                        p  Текст
+
+            div(data-town='2').tabs.sight
+                h3.h3 Томск
+
+                .sight__top
+                    ul.tabs__caption
+                        li.active Вокзал Новосибирск-Главный
+                        li Академгородок
+
+                    .sight__photos.containers
+                        .tabs__content.active
+                            .sight__slider
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        img(src='/src/assets/img/img--sight.jpg' alt='Фото')
+                                    .swiper-slide
+                                        img(src='/src/assets/img/img--sight.jpg' alt='Фото')
+
+                                .swiper-button-next
+                                    svg(width=13 height=12)
+                                        use(xlink:href='/src/assets/img/sprite.svg#arrow-right')
+                                .swiper-button-prev
+                                    svg(width=13 height=12)
+                                        use(xlink:href='/src/assets/img/sprite.svg#arrow-left')
+                                .swiper-pagination
+
+                        .tabs__content
+                            .sight__slider
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        img(src='/src/assets/img/img--sight.jpg' alt='Фото')
+                                    .swiper-slide
+                                        img(src='/src/assets/img/img--sight.jpg' alt='Фото')
+                                    .swiper-slide
+                                        img(src='/src/assets/img/img--sight.jpg' alt='Фото')
+
+                                .swiper-button-next
+                                    svg(width=13 height=12)
+                                        use(xlink:href='/src/assets/img/sprite.svg#arrow-right')
+                                .swiper-button-prev
+                                    svg(width=13 height=12)
+                                        use(xlink:href='/src/assets/img/sprite.svg#arrow-left')
+                                .swiper-pagination
+
+                        .tabs__content
+                            .sight__slider
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        img(src='/src/assets/img/img--sight.jpg' alt='Фото')
+                                    .swiper-slide
+                                        img(src='/src/assets/img/img--sight.jpg' alt='Фото')
+                                    .swiper-slide
+                                        img(src='/src/assets/img/img--sight.jpg' alt='Фото')
+                                    .swiper-slide
+                                        img(src='/src/assets/img/img--sight.jpg' alt='Фото')
+
+                                .swiper-button-next
+                                    svg(width=13 height=12)
+                                        use(xlink:href='/src/assets/img/sprite.svg#arrow-right')
+                                .swiper-button-prev
+                                    svg(width=13 height=12)
+                                        use(xlink:href='/src/assets/img/sprite.svg#arrow-left')
+                                .swiper-pagination
+
+                .sight__description.containers
+                    .tabs__content.active
+                        p  Вокзал Новосибирск-Главный&nbsp;&mdash; один из&nbsp;крупнейших в&nbsp;стране. Он&nbsp;притягивает внимание не&nbsp;только тех, кто отправляется в&nbsp;путешествие на&nbsp;поезде или прибывает в&nbsp;город, но&nbsp;и&nbsp;любителей необычных строений. Его центральная часть в&nbsp;форме триумфальной арки обрамлена пилястрами и&nbsp;увенчана аттиком. А&nbsp;на&nbsp;перронах установлены скульптуры людей, встречающих и&nbsp;провожающих поезда.
+                    .tabs__content
+                        p  Описание
+                    .tabs__content
+                        p  Текст
+
+            div(data-town='3').tabs.sight
+                h3.h3 Барнаул
+
+                .sight__top
+                    ul.tabs__caption
+                        li.active Вокзал Новосибирск-Главный
+                        li Академгородок
+
+                    .sight__photos.containers
+                        .tabs__content.active
+                            .sight__slider
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        img(src='/src/assets/img/img--sight.jpg' alt='Фото')
+                                    .swiper-slide
+                                        img(src='/src/assets/img/img--sight.jpg' alt='Фото')
+
+                                .swiper-button-next
+                                    svg(width=13 height=12)
+                                        use(xlink:href='/src/assets/img/sprite.svg#arrow-right')
+                                .swiper-button-prev
+                                    svg(width=13 height=12)
+                                        use(xlink:href='/src/assets/img/sprite.svg#arrow-left')
+                                .swiper-pagination
+
+                        .tabs__content
+                            .sight__slider
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        img(src='/src/assets/img/img--sight.jpg' alt='Фото')
+                                    .swiper-slide
+                                        img(src='/src/assets/img/img--sight.jpg' alt='Фото')
+                                    .swiper-slide
+                                        img(src='/src/assets/img/img--sight.jpg' alt='Фото')
+
+                                .swiper-button-next
+                                    svg(width=13 height=12)
+                                        use(xlink:href='/src/assets/img/sprite.svg#arrow-right')
+                                .swiper-button-prev
+                                    svg(width=13 height=12)
+                                        use(xlink:href='/src/assets/img/sprite.svg#arrow-left')
+                                .swiper-pagination
+
+                        .tabs__content
+                            .sight__slider
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        img(src='/src/assets/img/img--sight.jpg' alt='Фото')
+                                    .swiper-slide
+                                        img(src='/src/assets/img/img--sight.jpg' alt='Фото')
+                                    .swiper-slide
+                                        img(src='/src/assets/img/img--sight.jpg' alt='Фото')
+                                    .swiper-slide
+                                        img(src='/src/assets/img/img--sight.jpg' alt='Фото')
+
+                                .swiper-button-next
+                                    svg(width=13 height=12)
+                                        use(xlink:href='/src/assets/img/sprite.svg#arrow-right')
+                                .swiper-button-prev
+                                    svg(width=13 height=12)
+                                        use(xlink:href='/src/assets/img/sprite.svg#arrow-left')
+                                .swiper-pagination
+
+                .sight__description.containers
+                    .tabs__content.active
+                        p  Вокзал Новосибирск-Главный&nbsp;&mdash; один из&nbsp;крупнейших в&nbsp;стране. Он&nbsp;притягивает внимание не&nbsp;только тех, кто отправляется в&nbsp;путешествие на&nbsp;поезде или прибывает в&nbsp;город, но&nbsp;и&nbsp;любителей необычных строений. Его центральная часть в&nbsp;форме триумфальной арки обрамлена пилястрами и&nbsp;увенчана аттиком. А&nbsp;на&nbsp;перронах установлены скульптуры людей, встречающих и&nbsp;провожающих поезда.
+                    .tabs__content
+                        p  Описание
+                    .tabs__content
+                        p  Текст
+
+            div(data-town='4').tabs.sight
+                h3.h3 Новосибирск
+
+                .sight__top
+                    ul.tabs__caption
+                        li.active Вокзал Новосибирск-Главный
+                        li Академгородок
+
+                    .sight__photos.containers
+                        .tabs__content.active
+                            .sight__slider
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        img(src='/src/assets/img/img--sight.jpg' alt='Фото')
+                                    .swiper-slide
+                                        img(src='/src/assets/img/img--sight.jpg' alt='Фото')
+
+                                .swiper-button-next
+                                    svg(width=13 height=12)
+                                        use(xlink:href='/src/assets/img/sprite.svg#arrow-right')
+                                .swiper-button-prev
+                                    svg(width=13 height=12)
+                                        use(xlink:href='/src/assets/img/sprite.svg#arrow-left')
+                                .swiper-pagination
+
+                        .tabs__content
+                            .sight__slider
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        img(src='/src/assets/img/img--sight.jpg' alt='Фото')
+                                    .swiper-slide
+                                        img(src='/src/assets/img/img--sight.jpg' alt='Фото')
+                                    .swiper-slide
+                                        img(src='/src/assets/img/img--sight.jpg' alt='Фото')
+
+                                .swiper-button-next
+                                    svg(width=13 height=12)
+                                        use(xlink:href='/src/assets/img/sprite.svg#arrow-right')
+                                .swiper-button-prev
+                                    svg(width=13 height=12)
+                                        use(xlink:href='/src/assets/img/sprite.svg#arrow-left')
+                                .swiper-pagination
+
+                        .tabs__content
+                            .sight__slider
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        img(src='/src/assets/img/img--sight.jpg' alt='Фото')
+                                    .swiper-slide
+                                        img(src='/src/assets/img/img--sight.jpg' alt='Фото')
+                                    .swiper-slide
+                                        img(src='/src/assets/img/img--sight.jpg' alt='Фото')
+                                    .swiper-slide
+                                        img(src='/src/assets/img/img--sight.jpg' alt='Фото')
+
+                                .swiper-button-next
+                                    svg(width=13 height=12)
+                                        use(xlink:href='/src/assets/img/sprite.svg#arrow-right')
+                                .swiper-button-prev
+                                    svg(width=13 height=12)
+                                        use(xlink:href='/src/assets/img/sprite.svg#arrow-left')
+                                .swiper-pagination
+
+                .sight__description.containers
+                    .tabs__content.active
+                        p  Вокзал Новосибирск-Главный&nbsp;&mdash; один из&nbsp;крупнейших в&nbsp;стране. Он&nbsp;притягивает внимание не&nbsp;только тех, кто отправляется в&nbsp;путешествие на&nbsp;поезде или прибывает в&nbsp;город, но&nbsp;и&nbsp;любителей необычных строений. Его центральная часть в&nbsp;форме триумфальной арки обрамлена пилястрами и&nbsp;увенчана аттиком. А&nbsp;на&nbsp;перронах установлены скульптуры людей, встречающих и&nbsp;провожающих поезда.
+                    .tabs__content
+                        p  Описание
+                    .tabs__content
+                        p  Текст
+
+        .text-center
+            button.button.button-black.js--close-modal Назад
+

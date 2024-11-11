@@ -1,0 +1,42 @@
+.swiper-initialized
+  position: relative
+
+  .swiper-button-next,
+  .swiper-button-prev
+    position: absolute
+    width: 3.4rem
+    height: 3.4rem
+    background: $grayBgColor
+    border-radius: 100%
+    top: 50%
+    transform: translateY(-50%)
+
+    svg
+      width: auto
+      height: auto
+
+    &:after
+      content: ''
+
+  .swiper-pagination
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 2rem
+    display: flex
+    justify-content: center
+    gap: 8px
+    z-index: 10
+    opacity: 1
+
+    .swiper-pagination-bullet
+      width: 10px
+      height: 10px
+      border-radius: 100%
+      background: $whiteColor
+      @include transition
+      opacity: 1
+      margin: 0
+
+      &.swiper-pagination-bullet-active
+        background: $blueColor

@@ -1,0 +1,24 @@
+{
+  "name": "Web factory",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --config vite.config.dev.js",
+    "build": "vite build --config vite.config.prod.js",
+    "buildmin": "vite build --config vite.config.prodmin.js",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@vituum/vite-plugin-pug": "^1.1.0",
+    "sass": "^1",
+    "vite": "^5.3.5",
+    "vituum": "^1.1.0"
+  },
+  "homepage": "./",
+  "dependencies": {
+    "choices.js": "^11.0.2",
+    "flatpickr": "^4.6.13",
+    "swiper": "^11.1.14"
+  }
+}

@@ -1,0 +1,32 @@
+.route-tabs
+    .route-tabs__bg
+        .highlight
+        ul.route-tabs__list
+            li.route-tabs__el
+                .route-tabs__icon
+                    svg(width=12  height=12)
+                        use(xlink:href='/src/assets/img/sprite.svg#icon-auto')
+                span Междугороднее такси
+            li.route-tabs__el
+                .route-tabs__icon
+                    svg(width=12  height=12)
+                        use(xlink:href='/src/assets/img/sprite.svg#icon-airplane')
+                span Авиабилеты
+            li.route-tabs__el
+                .route-tabs__icon
+                    svg(width=11  height=13)
+                        use(xlink:href='/src/assets/img/sprite.svg#icon-train')
+                span ЖД билеты
+            li.route-tabs__el
+                .route-tabs__icon
+                    svg(width=12  height=13)
+                        use(xlink:href='/src/assets/img/sprite.svg#icon-bus')
+                span Автобусные перевозки
+
+    .route-tabs__hotel
+        .route-tabs__icon
+            svg(width=25  height=24)
+                use(xlink:href='/src/assets/img/sprite.svg#icon-hotel')
+        span или
+            =" "
+            a(href='') выбрать отель

@@ -1,0 +1,82 @@
+// px to rem
+//@function rem($pixels, $context: $mainFontSize)
+//  @if (unitless($pixels))
+//    $pixels: $pixels * 1px
+//
+//  @if (unitless($context))
+//    $context: $context * 1px
+//
+//  @return $pixels / $context * 1rem
+//
+//
+//@mixin size($width,$height: $width)
+//  width: $width
+//  height: $height
+//
+//
+//@mixin placeholder
+//  ::-webkit-input-placeholder @content
+//  :-moz-placeholder           @content
+//  ::-moz-placeholder          @content
+//  :-ms-input-placeholder      @content
+
+// Flex
+@mixin grid($rows, $hGap, $vGap)
+  display: grid
+  grid-template-columns: repeat($rows, 1fr)
+  grid-column-gap: $hGap
+  grid-row-gap: $vGap
+
+@mixin flex-column
+  display: flex
+  flex-wrap: wrap
+  flex-direction: column
+
+@mixin flex-column-reverse
+  display: flex
+  flex-wrap: wrap
+  flex-direction: column-reverse
+
+@mixin flex-center
+  display: flex
+  align-items: center
+  justify-content: center
+
+@mixin flex-center-column
+  @include flex-center
+  flex-direction: column
+
+@mixin flex-center-vert
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+
+@mixin flex-center-horiz
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+
+@mixin flex-justify-horiz
+  display: flex
+  flex-wrap: wrap
+  flex-direction: row
+  justify-content: space-between
+
+@mixin flex-justify-vert
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+// animation
+@mixin transition
+  transition: all 0.2s ease-in-out
+
+// typography
+@mixin font-params($font-size, $line-height, $font-weight: normal)
+  font-size: $font-size
+  line-height:  $line-height
+
+  @if $font-weight==normal
+    font-weight: 400
+  @else
+    font-weight: $font-weight

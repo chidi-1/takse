@@ -1,0 +1,27 @@
+.container
+  width: 100%
+  max-width: 1200px
+  padding: 0 20px
+  margin: 0 auto
+
+  @include tablet
+    padding: 0 3.2rem
+  @include mobile
+    padding: 0 1.6rem
+
+.text-center
+  text-align: center
+
+.row
+  display: grid
+
+  &-2
+    gap: 4rem
+    grid-template-columns: repeat(2, calc(50% - 2rem))
+
+    @include tablet
+      gap: 2rem
+      grid-template-columns: repeat(2, calc(50% - 1rem))
+
+    @include mobile
+      display: flex

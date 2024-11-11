@@ -1,0 +1,50 @@
+button,
+.button
+  @include flex-center
+  gap: 1rem
+  @include transition
+  cursor: pointer
+  text-decoration: none
+  padding: 1rem 1.3rem
+  min-height: 3.6rem
+  border-radius: 1.2rem
+  font-family: $fontInter
+  font-weight: 600
+  font-size: 1.4rem
+
+  @include tablet
+    font-size: 1rem
+    min-height: 2.3rem
+    padding: .5rem 1.3rem
+  @include mobile
+    font-size: 1.6rem
+    min-height: 3.5rem
+
+  &.no-style
+    padding: 0
+    border-radius: 0
+    background: transparent
+
+  &.button-blue
+    background: $blueColor
+    color: $whiteColor
+
+    &:hover,
+    &:focus,
+    &:active
+      background: $darkBlueColor
+
+  &.button-black
+    background: $blackColor
+    color: $whiteColor
+    border-radius: 2.5rem
+
+    &:hover,
+    &:focus,
+    &:active
+      background: $darkBlueColor
+
+  //&:hover
+  //&:active
+  //&.disabled,
+  //&:disabled

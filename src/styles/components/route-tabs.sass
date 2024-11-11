@@ -1,0 +1,142 @@
+.route-tabs
+  display: flex
+  align-items: stretch
+  gap: 1rem
+  position: relative
+  transform: translateX(-4px)
+
+  @include mobile
+    flex-direction: column
+    gap: .8rem
+    transform: none
+
+  &__bg
+    background: #282828
+    border-radius: 8px
+    padding: 4px
+
+    .highlight
+      position: absolute
+      top: 4px
+      bottom: 4px
+      background: $whiteColor
+      border-radius: 8px
+      @include transition
+      z-index: 3
+
+      @include mobile
+        display: none
+
+  &__list
+    display: flex
+    align-items: stretch
+    position: relative
+    z-index: 5
+
+    @include mobile
+      display: grid
+      gap: 4px
+      grid-template-columns: repeat(2, 1fr)
+
+  &__el
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    padding: 7px 14px
+    border-radius: 8px
+    position: relative
+    z-index: 5
+
+    @include mobile
+      min-height: 5.5rem
+
+    &:hover
+      cursor: pointer
+
+      .route-tabs__icon
+        svg
+          color: $whiteColor
+
+      span
+        text-decoration: underline
+
+    &.active
+      cursor: default
+
+      @include mobile
+        background: $whiteColor
+
+      .route-tabs__icon
+        svg
+          color: $blueColor
+
+      span
+        color: $blueColor
+
+    span
+      pointer-events: none
+      @include transition
+      color: $whiteColor
+      font-size: $fontSize_13
+
+      @include tablet
+        font-size: .8rem
+      @include mobile
+        font-size: 1.2rem
+
+
+  &__icon
+    width: 2.4rem
+    height: 2.4rem
+    display: flex
+    align-items: center
+    justify-content: center
+    pointer-events: none
+
+    @include tablet
+      width: 1.1rem
+      height: 1.1rem
+    @include mobile
+      width: 2.4rem
+      height: 2.4rem
+
+    svg
+      max-width: 100%
+      max-height: 100%
+      @include transition
+      color: $grayTextColor
+
+  &__hotel
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+    @include mobile
+      background: #282828
+      border-radius: 8px
+      padding: 4px
+    @include mobile
+      min-height: 5.5rem
+
+    svg
+      @include transition
+      color: $grayTextColor
+
+    span
+      @include transition
+      color: $whiteColor
+      font-size: $fontSize_13
+
+      @include tablet
+        font-size: .8rem
+      @include mobile
+        font-size: 1.2rem
+
+      a
+        @include transition
+        text-decoration: underline
+
+        &:hover
+          color: $lightBlueColor

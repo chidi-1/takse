@@ -1,0 +1,134 @@
+extends ../views/layouts/layout
+
+block vars
+    - var pageClass = 'page-index'
+
+block content
+    main
+        section.top
+            include ../views/components/header
+
+            .container
+                .top__text
+                    h1.h1 Междугороднее такси России 24/7
+                    p.fs-20 Более 15&nbsp;лет помогаем вам передвигаться с&nbsp;комфортом
+
+                .top__form
+                    include ../views/components/route-tabs
+                    include ../views/components/route-form
+
+                ul.vantages
+                    li.vantages__el
+                        picture.vantages__img
+                            source(type='image/webp' srcset='/src/assets/img/img--top-1.webp 1x, /src/assets/img/img--top-1@2x.webp 2x')
+                            img(srcset='/src/assets/img/img--top-1.png 1x, /src/assets/img/img--top-1@2x.png 2x' alt='Баннер')
+
+                        span.vantages__text От&nbsp;адреса до&nbsp;адреса без попутчиков
+
+                    li.vantages__el
+                        picture.vantages__img
+                            source(type='image/webp' srcset='/src/assets/img/img--top-2.webp 1x, /src/assets/img/img--top-2@2x.webp 2x')
+                            img(srcset='/src/assets/img/img--top-2.png 1x, /src/assets/img/img--top-2@2x.png 2x' alt='Баннер')
+
+                        span.vantages__text Время в&nbsp;пути не&nbsp;подлежит оплате
+
+                    li.vantages__el
+                        picture.vantages__img
+                            source(type='image/webp' srcset='/src/assets/img/img--top-3.webp 1x, /src/assets/img/img--top-3@2x.webp 2x')
+                            img(srcset='/src/assets/img/img--top-3.png 1x, /src/assets/img/img--top-3@2x.png 2x' alt='Баннер')
+
+                        span.vantages__text Фиксированная стоимость
+
+        section.how
+            .container
+                .row.row-2
+                    .how__content
+                        h2.h2 Как работает сервис
+
+                        picture.how__img.mobile
+                            source(type='image/webp' srcset='/src/assets/img/img--how.webp 1x, /src/assets/img/img--how@2x.webp 2x')
+                            img(srcset='/src/assets/img/img--how.jpg 1x, /src/assets/img/img--how@2x.jpg 2x' alt='Баннер')
+
+                        ul.how__list
+                            li.how__el
+                                span.how__number 01
+                                .how__text
+                                    span.title Вы&nbsp;оставляете заявку
+                                    span Звоните по&nbsp;телефону, или рассчитайте цену на&nbsp;такси cамостоятельно
+
+                            li.how__el
+                                span.how__number 02
+                                .how__text
+                                    span.title Уточняем детали
+                                    span Указываете время, адрес и&nbsp;нужный автомобиль
+
+                            li.how__el
+                                span.how__number 03
+                                .how__text
+                                    span.title Выезжаем
+                                    span Дожидаетесь машину и&nbsp;отправляетсь в&nbsp;дорогу
+
+                    picture.how__img.desktop
+                        source(type='image/webp' srcset='/src/assets/img/img--how.webp 1x, /src/assets/img/img--how@2x.webp 2x')
+                        img(srcset='/src/assets/img/img--how.jpg 1x, /src/assets/img/img--how@2x.jpg 2x' alt='Баннер')
+
+
+        section.trick
+            .container
+                h2.h2 фишки TAkSE
+
+                ul.trick__list
+                    li.trick__el
+                        .trick__header
+                            span.trick__number 01
+                            span.trick__title Комфорт и&nbsp;удобство
+
+                        p.trick__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+
+                    li.trick__el
+                        .trick__header
+                            span.trick__number 02
+                            span.trick__title Безопасность
+
+                        p.trick__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+
+                    li.trick__el
+                        .trick__header
+                            span.trick__number 03
+                            span.trick__title Прозрачность и&nbsp;честность
+
+                        p.trick__text Lorem ipsum dolor sit amet, veniam
+
+                    li.trick__el
+                        .trick__header
+                            span.trick__number 04
+                            span.trick__title Поддержка клиентов
+
+                        p.trick__text Lorem ipsum dolor sit amet, veniam
+
+                    li.trick__el
+                        .trick__header
+                            span.trick__number 05
+                            span.trick__title Возможность предварительного заказа
+
+                        p.trick__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+
+        section.fleet
+            .container
+                h2.h2 наш автопарк
+
+                include ../views/components/fleet-slider
+
+        section.banner
+            .container
+                .banner__content
+                    .banner__text
+                        h2.h2 присоединяйся в&nbsp;команду
+                            =" "
+                            mark takse
+                        p Несколько вакансий уже ждут тебя!
+                        a(href='').button.button-blue Присоединиться
+
+    //include ../views/components/component
+
+    include ../views/components/route-modal
