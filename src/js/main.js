@@ -13,9 +13,11 @@ document.addEventListener("DOMContentLoaded", () => {
             inline: false,
             //mode: "range",
             "locale": Russian,
+            dateFormat: "d.m.Y",
+            disableMobile: "true",
             onChange: function (instance) {
-                let input = document.querySelector(".calendar-inline.range");
                 !input.classList.contains('changed') && input.classList.add('changed');
+                syncData(input);
             }
         });
         calendars.push(calendar)
@@ -29,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
             let choices = new Choices(item, {
                 allowHTML: true,
                 allowHtmlUserInput: true,
-                searchEnabled: false,
+                searchEnabled: true,
                 itemSelectText: ''
             });
             selectsStyled.push(choices);
@@ -75,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 slidesPerView: 3,
                 breakpoints: {
                     320: {
-                        spaceBetween: 0,
+                        spaceBetween: 16,
                         slidesPerView: 1,
                     },
                     780: {
@@ -165,7 +167,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function syncData(input) {
-        document.querySelectorAll('.route-form .calendar-inline.range').value = input.value;
+        document.querySelectorAll('.route-form .calendar-inline.range').forEach(item => {
+            item.value = input.value;
+            item.classList.add('changed');
+        })
         calendars.forEach(calendar => calendar.setDate(input.value))
     }
 
@@ -291,5 +296,12 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector('.js--close-modal').addEventListener('click', (e) => {
         document.querySelector('body').classList.remove('fixed');
         document.querySelector('.route-modal').classList.remove('visible');
+    })
+
+    // мобильное меню
+    document.querySelector('.js--mobile-menu').addEventListener('click', (e) => {
+        if(window.innerWidth < 1023) {
+            document.querySelector('.header__nav .nav').classList.toggle('open')
+        }
     })
 })

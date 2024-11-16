@@ -42,11 +42,18 @@
         @include tablet
           min-height: 3.4rem
         @include mobile
+          display: block
           width: 100%
           padding: 0 1.6rem
           border-radius: 8px
+          font-size: 1.6rem
+          min-height: 4.2rem
 
-        &.changed + .label-text
+        &::placeholder
+          opacity: 0
+
+        &.changed + .label-text,
+        &.changed + input + .label-text
           font-size: 1rem
           top: 0
           transform: translateY(-25%)
@@ -59,6 +66,14 @@
         font-family: $fontSegoe
         color: #BDBDBD
 
+        @include mobile
+          font-size: 1.6rem
+
+        &.moved
+          font-size: 1rem
+          top: 0
+          transform: translateY(-25%)
+
     label.label-select
       border-right: 1px solid #D4D4D4
       position: relative
@@ -69,6 +84,7 @@
         padding: 0 1.6rem
       @include mobile
         width: auto
+        border: none
 
       .no-style
         position: absolute
@@ -101,6 +117,8 @@
 
           @include tablet
             min-height: 3.4rem
+          @include mobile
+            min-height: 4.2rem
 
           .js--from + .choices__list:after
             content: 'Откуда'
@@ -122,6 +140,8 @@
 
             @include tablet
               min-height: 3.4rem
+            @include mobile
+              min-height: 4.2rem
 
             .choices__item
               font-family: $fontSegoe

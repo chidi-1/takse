@@ -22,8 +22,16 @@
       overflow: visible
 
     .swiper-wrapper
+      display: flex
+      align-items: stretch
+
       @include mobile
         overflow: visible
+
+      .swiper-slide
+        display: flex
+        align-items: stretch
+        height: auto
 
     .swiper-button-next,
     .swiper-button-prev
@@ -33,10 +41,11 @@
   &__el
     background: $whiteColor
     border-radius: 2.4rem
-    padding: 3.4rem
+    padding: 3.4rem 3.4rem 9rem
+    position: relative
 
     @include tablet
-      padding: 1.3rem
+      padding: 1.3rem 1.3rem 9rem
 
   &__img
     height: 18rem
@@ -71,6 +80,10 @@
       min-width: 19rem
       max-width: 100%
       border-radius: 2.4rem
+      position: absolute
+      bottom: 3.6rem
+      left: 50%
+      transform: translateX(-50%)
 
       @include tablet
         min-width: 9rem
