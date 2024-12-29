@@ -1,0 +1,52 @@
+{
+  "route": [
+    {
+      "name": "Омск",
+      "photo": "https://loremflickr.com/260/230",
+      "sights": [
+        {
+          "name": "Достопримечательность Омск 1",
+          "description": "Описание Достопримечательность Омск 1",
+          "photos": [
+            "https://loremflickr.com/680/440",
+            "https://loremflickr.com/680/440",
+            "https://loremflickr.com/680/440"
+          ]
+        },
+        {
+          "name": "Достопримечательность Омск 2",
+          "description": "Описание Достопримечательность Омск 1",
+          "photos": [
+            "https://loremflickr.com/680/440",
+            "https://loremflickr.com/680/440",
+            "https://loremflickr.com/680/440"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Новосибирск",
+      "photo": "https://loremflickr.com/260/230",
+      "sights": [
+        {
+          "name": "Достопримечательность Новосибирск 1",
+          "description": "Описание Достопримечательность Новосибирск 1",
+          "photos": [
+            "https://loremflickr.com/680/440",
+            "https://loremflickr.com/680/440",
+            "https://loremflickr.com/680/440"
+          ]
+        },
+        {
+          "name": "Достопримечательность Новосибирск 2",
+          "description": "Описание Достопримечательность Новосибирск 1",
+          "photos": [
+            "https://loremflickr.com/680/440",
+            "https://loremflickr.com/680/440",
+            "https://loremflickr.com/680/440"
+          ]
+        }
+      ]
+    }
+  ]
+}

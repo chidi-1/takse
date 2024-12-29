@@ -12,11 +12,13 @@
       min-height: 4.5rem
 
   &__labels
-    display: flex
+    display: grid
+    grid-template-columns: repeat(2, 18rem) 1fr
     align-items: stretch
     padding: 8px 0
     background: $whiteColor
     border-radius: 1.2rem
+    position: relative
 
     @include tablet
       padding: 6px 0
@@ -24,6 +26,13 @@
       padding: 4px 0
       display: grid
       grid-template-columns: repeat(2, 50%)
+
+    .no-style
+      position: absolute
+      z-index: 20
+      top: 50%
+      left: 18rem
+      transform: translate(-50%,-50%)
 
     label.label-date
       position: relative
@@ -161,6 +170,11 @@
           border: none
           width: calc(100% + 2.6rem)
           left: -1.3rem
+          top: 0 !important
+          bottom: auto !important
+
+          .choices__input.choices__input--cloned
+            height: 5.2rem !important
 
           .choices__list
             padding: 8px

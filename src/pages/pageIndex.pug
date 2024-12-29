@@ -15,7 +15,8 @@ block content
 
                 .top__form
                     include ../views/components/route-tabs
-                    include ../views/components/route-form
+                    include ../views/components/route-form.pug
+                    +route-form('modal')
 
                 ul.vantages
                     li.vantages__el
@@ -129,6 +130,3 @@ block content
                         p Несколько вакансий уже ждут тебя!
                         a(href='').button.button-blue Присоединиться
 
-    //include ../views/components/component
-
-    include ../views/components/route-modal

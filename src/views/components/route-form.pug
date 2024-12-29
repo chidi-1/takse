@@ -1,27 +1,25 @@
-.route-form
-    .route-form__labels
-        label.label-select
-            select(name='').js--select-style.js--from
-                // в селекты обязательно вставлять первый пустой элемент для правильной анимации подсказки
-                option(selected disabled)
-                option(value='Барнаул') Барнаул
-                option(value='Новосибирск') Новосибирск
-                option(value='Томск') Томск
-                option(value='Красноярск') Красноярск
+mixin route-form(buttonType)
+    .route-form
+        .route-form__labels
+            label.label-select
+                select(name='').js--select-style.js--from
+                    // в селекты обязательно вставлять первый пустой элемент для правильной анимации подсказки
+                    option(selected disabled)
 
-            button.no-style
+            label.label-select
+                select(name='').js--select-style.js--to
+                    option(selected disabled)
+
+            label.label-date
+                input(type='text' name='').calendar-inline.range
+                span.label-text Когда
+
+            button.no-style.js--change-towns
                 svg(width=24  height=24)
                     use(xlink:href='/src/assets/img/sprite.svg#icon-swap')
 
-        label.label-select
-            select(name='').js--select-style.js--to
-                option(selected disabled)
-                option(value='Барнаул') Барнаул
-                option(value='Новосибирск') Новосибирск
-                option(value='Томск') Томск
-                option(value='Красноярск') Красноярск
-        label.label-date
-            input(type='text' name='').calendar-inline.range
-            span.label-text Когда
-
-    button(type='button').button.button-blue.js--open-modal Найти транспорт
+        if(buttonType === 'modal')
+            button(type='button' data-fancybox data-src="#route-modal").button.button-blue.js--open-modal Найти транспорт
+        if(buttonType === 'send')
+            // ЗАМЕНИТЬ написать, что нужно делать при клике на кнопку в уже открытой модалке с выстроенным маршрутом
+            button(type='button').button.button-blue Найти транспорт
